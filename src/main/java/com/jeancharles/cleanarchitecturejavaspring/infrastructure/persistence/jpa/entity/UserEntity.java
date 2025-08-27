@@ -1,6 +1,5 @@
-package com.jeancharles.cleanarchitecturejavaspring.infraestructure.persistence.entity;
+package com.jeancharles.cleanarchitecturejavaspring.infrastructure.persistence.jpa.entity;
 
-import com.jeancharles.cleanarchitecturejavaspring.domain.entity.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

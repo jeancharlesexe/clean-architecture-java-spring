@@ -1,6 +1,6 @@
-package com.jeancharles.cleanarchitecturejavaspring.infraestructure.persistence.jpa;
+package com.jeancharles.cleanarchitecturejavaspring.infrastructure.persistence.jpa.repository;
 
-import com.jeancharles.cleanarchitecturejavaspring.infraestructure.persistence.entity.UserEntity;
+import com.jeancharles.cleanarchitecturejavaspring.infrastructure.persistence.jpa.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

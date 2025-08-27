@@ -33,9 +33,7 @@ public class CreateUserService implements CreateUserInteractor {
                 savedUser.getId(),
                 savedUser.getName(),
                 savedUser.getName(),
-                savedUser.getPassword(),
-                savedUser.getCreatedAt(),
-                savedUser.getUpdatedAt()
+                savedUser.getCreatedAt()
         );
 
     }
