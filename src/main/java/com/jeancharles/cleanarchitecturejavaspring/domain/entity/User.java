@@ -23,7 +23,7 @@ public class User {
     }
 
     // factory method to create a new user
-    public static User create(String id, String name, String email, String password) {
+    public static User create(String name, String email, String password) {
         // possible validations
 
         // --------------------
