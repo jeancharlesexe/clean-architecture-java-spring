@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.application.port.input;
+package com.jeancharles.cleanarchitecturejavaspring.application.core.port.input;
 
 // open port to use case (entry)
 public interface CreateUserInteractor {

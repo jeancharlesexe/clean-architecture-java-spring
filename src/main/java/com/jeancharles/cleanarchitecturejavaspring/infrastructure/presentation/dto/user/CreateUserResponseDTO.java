@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto;
+package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.application.port.input;
+package com.jeancharles.cleanarchitecturejavaspring.application.core.port.input;
 
 import java.time.LocalDateTime;
 
