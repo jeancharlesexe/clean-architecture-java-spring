@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.infrastructure.persistence.repository;
+package com.jeancharles.cleanarchitecturejavaspring.infrastructure.persistence.adapter;
 
 import com.jeancharles.cleanarchitecturejavaspring.domain.entity.User;
 import com.jeancharles.cleanarchitecturejavaspring.domain.repository.UserRepository;

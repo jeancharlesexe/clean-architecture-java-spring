@@ -32,7 +32,7 @@ public class CreateUserService implements CreateUserInteractor {
         return new CreateUserResponse(
                 savedUser.getId(),
                 savedUser.getName(),
-                savedUser.getName(),
+                savedUser.getEmail(),
                 savedUser.getCreatedAt()
         );
 
