@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.application.core.port.input;
+package com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input;
 
 // Command - an example of data entry to interactor use
 public class CreateUserCommand{

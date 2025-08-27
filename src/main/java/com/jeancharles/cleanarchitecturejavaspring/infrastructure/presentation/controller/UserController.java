@@ -1,8 +1,8 @@
 package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.controller;
 
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserCommand;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserInteractor;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserResponse;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserCommand;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserRequestDTO;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserResponseDTO;
 import org.springframework.http.HttpStatus;

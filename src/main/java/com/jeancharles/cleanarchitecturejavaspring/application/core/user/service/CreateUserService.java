@@ -1,8 +1,8 @@
-package com.jeancharles.cleanarchitecturejavaspring.application.core.service;
+package com.jeancharles.cleanarchitecturejavaspring.application.core.user.service;
 
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserCommand;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserInteractor;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.port.input.CreateUserResponse;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserCommand;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
+import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
 import com.jeancharles.cleanarchitecturejavaspring.domain.entity.User;
 import com.jeancharles.cleanarchitecturejavaspring.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
