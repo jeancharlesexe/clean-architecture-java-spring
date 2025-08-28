@@ -3,11 +3,14 @@ package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.
 import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserCommand;
 import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
 import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
+import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.GlobalApiResponse;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserRequestDTO;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserResponseDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/api/users")
@@ -24,7 +27,7 @@ public class UserController {
     }
 
     @PostMapping
-    public ResponseEntity<CreateUserResponseDTO> createUser(@RequestBody CreateUserRequestDTO createUserRequestDTO) {
+    public ResponseEntity<GlobalApiResponse<CreateUserResponseDTO>> createUser(@RequestBody CreateUserRequestDTO createUserRequestDTO) {
         CreateUserCommand createUserCommand = new CreateUserCommand(
                 createUserRequestDTO.name(),
                 createUserRequestDTO.email(),
@@ -43,7 +46,13 @@ public class UserController {
         );
 
         // response as 200 if created
-        return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
-
+        return ResponseEntity.status(HttpStatus.CREATED).body(
+            new GlobalApiResponse<>(
+                    HttpStatus.CREATED.value(),
+                    "User created successfully",
+                    responseDTO,
+                    LocalDateTime.now()
+            )
+        );
     }
 }

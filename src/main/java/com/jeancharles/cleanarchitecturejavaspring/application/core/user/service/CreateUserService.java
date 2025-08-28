@@ -4,6 +4,7 @@ import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.in
 import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
 import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
 import com.jeancharles.cleanarchitecturejavaspring.domain.entity.User;
+import com.jeancharles.cleanarchitecturejavaspring.domain.exception.UserAlreadyExistsException;
 import com.jeancharles.cleanarchitecturejavaspring.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,9 @@ public class CreateUserService implements CreateUserInteractor {
     @Override
     public CreateUserResponse execute(CreateUserCommand command){
         // 1 validations
-
+        if(userRepository.existsByEmail(command.getEmail())){
+            throw new UserAlreadyExistsException(command.getEmail());
+        }
         // -------------
 
         // 2 creating domain entity using factory method
