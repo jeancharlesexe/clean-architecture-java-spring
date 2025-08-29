@@ -37,4 +37,9 @@ public class UserRespositoryImpl implements UserRepository {
                 savedEntity.getUpdatedAt()
         );
     }
+
+    @Override
+    public Boolean existsByEmail(String email) {
+        return userRepositoryJpa.existsByEmail(email);
+    }
 }

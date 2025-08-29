@@ -20,13 +20,13 @@ public class CreateUserService implements CreateUserUseCase {
     @Override
     public CreateUserResponse execute(CreateUserCommand command){
         // 1 validations
-        if(userRepository.existsByEmail(command.getEmail())){
-            throw new UserAlreadyExistsException(command.getEmail());
+        if(userRepository.existsByEmail(command.email())){
+            throw new UserAlreadyExistsException(command.email());
         }
         // -------------
 
         // 2 creating domain entity using factory method
-        User user = User.create(command.getName(), command.getEmail(), command.getPassword());
+        User user = User.create(command.name(), command.email(), command.password());
 
         // 3 saving the output of gateway
         User savedUser = userRepository.save(user);
