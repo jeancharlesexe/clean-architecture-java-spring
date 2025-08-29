@@ -10,10 +10,10 @@ import org.springframework.stereotype.Service;
 
 // injecting service spring dependencies
 @Service
-public class CreateUserService implements CreateUserUseCase {
+public class CreateUserInteractor implements CreateUserUseCase {
     private final UserRepository userRepository;
 
-    public CreateUserService(UserRepository userRepository) {
+    public CreateUserInteractor(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -38,6 +38,5 @@ public class CreateUserService implements CreateUserUseCase {
                 savedUser.getEmail(),
                 savedUser.getCreatedAt()
         );
-
     }
 }
