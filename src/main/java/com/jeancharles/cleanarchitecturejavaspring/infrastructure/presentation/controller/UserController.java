@@ -1,8 +1,8 @@
 package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.controller;
 
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserCommand;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.input.CreateUserCommand;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.CreateUserUseCase;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.output.CreateUserResponse;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.GlobalApiResponse;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserRequestDTO;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.user.CreateUserResponseDTO;
@@ -15,9 +15,9 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
-    private final CreateUserInteractor createUserInteractor;
+    private final CreateUserUseCase createUserInteractor;
 
-    public UserController(CreateUserInteractor createUserInteractor) {
+    public UserController(CreateUserUseCase createUserInteractor) {
         this.createUserInteractor = createUserInteractor;
     }
 

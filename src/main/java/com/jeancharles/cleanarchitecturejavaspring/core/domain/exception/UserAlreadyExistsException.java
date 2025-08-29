@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.domain.exception;
+package com.jeancharles.cleanarchitecturejavaspring.core.domain.exception;
 
 public class UserAlreadyExistsException extends RuntimeException {
     public UserAlreadyExistsException(String email) {

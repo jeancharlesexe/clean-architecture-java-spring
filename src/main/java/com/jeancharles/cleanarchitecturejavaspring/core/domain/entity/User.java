@@ -1,4 +1,4 @@
-package com.jeancharles.cleanarchitecturejavaspring.domain.entity;
+package com.jeancharles.cleanarchitecturejavaspring.core.domain.entity;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

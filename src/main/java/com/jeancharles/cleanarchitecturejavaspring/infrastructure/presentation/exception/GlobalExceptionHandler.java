@@ -1,6 +1,6 @@
 package com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.exception;
 
-import com.jeancharles.cleanarchitecturejavaspring.domain.exception.UserAlreadyExistsException;
+import com.jeancharles.cleanarchitecturejavaspring.core.domain.exception.UserAlreadyExistsException;
 import com.jeancharles.cleanarchitecturejavaspring.infrastructure.presentation.dto.GlobalApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

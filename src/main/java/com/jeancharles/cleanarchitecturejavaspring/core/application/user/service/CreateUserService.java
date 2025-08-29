@@ -1,16 +1,16 @@
-package com.jeancharles.cleanarchitecturejavaspring.application.core.user.service;
+package com.jeancharles.cleanarchitecturejavaspring.core.application.user.service;
 
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserCommand;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserInteractor;
-import com.jeancharles.cleanarchitecturejavaspring.application.core.user.port.input.CreateUserResponse;
-import com.jeancharles.cleanarchitecturejavaspring.domain.entity.User;
-import com.jeancharles.cleanarchitecturejavaspring.domain.exception.UserAlreadyExistsException;
-import com.jeancharles.cleanarchitecturejavaspring.domain.repository.UserRepository;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.input.CreateUserCommand;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.CreateUserUseCase;
+import com.jeancharles.cleanarchitecturejavaspring.core.application.user.port.output.CreateUserResponse;
+import com.jeancharles.cleanarchitecturejavaspring.core.domain.entity.User;
+import com.jeancharles.cleanarchitecturejavaspring.core.domain.exception.UserAlreadyExistsException;
+import com.jeancharles.cleanarchitecturejavaspring.core.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 // injecting service spring dependencies
 @Service
-public class CreateUserService implements CreateUserInteractor {
+public class CreateUserService implements CreateUserUseCase {
     private final UserRepository userRepository;
 
     public CreateUserService(UserRepository userRepository) {
